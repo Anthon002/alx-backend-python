@@ -7,4 +7,4 @@ def to_str(n: float) -> str:
     '''This method converts float to string
     '''
     tostr_ = str(n)
-    return tostr
+    return tostr_
