@@ -4,8 +4,8 @@
 from typing import Iterable, List, Sequence, Tuple
 
 
-def element_length(list_: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     '''This function will calc the length of the list of sequences.
     '''
-    length = [(j, len(j)) for j in list_]
+    length = [(j, len(j)) for j in lst]
     return length
