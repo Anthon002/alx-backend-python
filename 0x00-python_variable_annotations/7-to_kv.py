@@ -4,9 +4,8 @@
 from typing import Union, Tuple
 
 
-def to_kv(data: Tuple[str, Union[int, float]]) -> Tuple[str, float]:
-  """This method will unpack a tuple containing a key and its value, 
-  and return a new tuple of the key and the square of the value.
-  """
-  key, value = data
-  return key, float(value**2)
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
+    '''This method will convert a key value to a tuple.
+    '''
+    convert_ = k, float(v**2)
+    return convert_
