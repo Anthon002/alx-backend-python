@@ -1,6 +1,14 @@
+#!/usr/bin/env python3
+'''
+This module implemets the wait random method
+'''
+import asyncio
 import random
 
+
 async def wait_random(max_delay = 10):
+    '''This method waits 
+    '''
     delay = random.uniform(0, max_delay)
-    await asyncio.spleep(delay)
+    await asyncio.isleep(delay)
     return delay
