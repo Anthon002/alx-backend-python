@@ -1,13 +1,20 @@
-#!usr/bin/env python3
-""" module for testing the utils
+#!/usr/bin/env python3
+"""A module for testing the utils module.
 """
-from utils import access_nested_map
 import unittest
 from typing import Dict, Tuple, Union
+from unittest.mock import patch, Mock
 from parameterized import parameterized
 
+from utils import (
+    access_nested_map,
+    get_json,
+    memoize,
+)
+
+
 class TestAccessNestedMap(unittest.TestCase):
-    """Class to test access_nested_map """
+    """Tests the `access_nested_map` function."""
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
@@ -19,5 +26,5 @@ class TestAccessNestedMap(unittest.TestCase):
             path: Tuple[str],
             expected: Union[Dict, int],
             ) -> None:
-        """method to test output of access_nested_map """
+        """Tests `access_nested_map`'s output."""
         self.assertEqual(access_nested_map(nested_map, path), expected)
